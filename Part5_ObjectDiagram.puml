@@ -1,0 +1,55 @@
+@startuml
+
+object "<u>phpDemo1:Folder</u>" as root {
+  folderName = "php_demo1"
+}
+
+object "<u>sourceFiles:Folder</u>" as sf {
+  folderName = "Source Files"
+}
+
+object "<u>includePath:Folder</u>" as ip {
+  folderName = "Include Path"
+}
+
+object "<u>remoteFiles:Folder</u>" as rf {
+  folderName = "Remote Files"
+}
+
+object "<u>phalcon:Folder</u>" as ph {
+  folderName = ".phalcon"
+}
+
+object "<u>cache:Folder</u>" as ca {
+  folderName = "cache"
+}
+
+object "<u>publicFolder:Folder</u>" as pub {
+  folderName = "public"
+}
+
+object "<u>file1:File</u>" as f1 {
+  fileName = ".htaccess"
+}
+
+object "<u>file2:File</u>" as f2 {
+  fileName = ".htrouter.php"
+}
+
+object "<u>file3:File</u>" as f3 {
+  fileName = "index.html"
+}
+
+root *-- sf
+root *-- ip
+root *-- rf
+
+sf *-- ph
+sf *-- ca
+sf *-- pub
+
+sf *-- f1
+sf *-- f2
+sf *-- f3
+
+@enduml

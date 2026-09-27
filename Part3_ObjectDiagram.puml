@@ -1,0 +1,20 @@
+@startuml
+
+object "<u>ship1:Ship</u>" as s1 {
+  shipName = "ship1"
+  shipCreationDate = "1987"
+}
+
+object "<u>cruiseship2:CruiseShip</u>" as cs2 {
+  shipName = "Cruiseship2"
+  shipCreationDate = "2001"
+  maxPassengers = 6000
+}
+
+object "<u>cargoship3:CargoShip</u>" as cs3 {
+  shipName = "Cargoship3"
+  shipCreationDate = "2009"
+  cargoCapacity = 200000
+}
+
+@enduml

@@ -1,0 +1,33 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class File {
+  - fileName: String
+  + File(fileName: String)
+  + getFileName(): String
+  + setFileName(fileName: String): void
+  + print(indent: String): void
+}
+
+class Folder {
+  - folderName: String
+  - fileList: ArrayList<File>
+  - subFolders: ArrayList<Folder>
+  + Folder(folderName: String)
+  + getFolderName(): String
+  + setFolderName(folderName: String): void
+  + addFile(file: File): void
+  + addSubFolder(subFolder: Folder): void
+  + deleteFile(fileName: String): void
+  + deleteSubFolder(subFolderName: String): void
+  + print(indent: String): void
+  + getFileList(): ArrayList<File>
+  + setFileList(fileList: ArrayList<File>): void
+  + getSubFolders(): ArrayList<Folder>
+  + setSubFolders(subFolders: ArrayList<Folder>): void
+}
+
+Folder *-- "*" File
+Folder *-- "*" Folder
+
+@enduml
